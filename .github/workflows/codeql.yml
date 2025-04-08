@@ -45,6 +45,7 @@ jobs:
         username: ${{ secrets.SERVER_USERNAME }}
         password: ${{ secrets.SERVER_PASS }}
         script: |
+          sudo su
           cd ${{ secrets.SERVER_PULL_DIR }}
           mv ${{ secrets.SERVER_MV }}
           git clone https://github.com/onumatoshiya/JPetStore-6.git
