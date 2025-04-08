@@ -46,6 +46,3 @@ jobs:
         password: ${{ secrets.SERVER_PASS }}
         script: |
           git pull origin master
-          cd ${{ secrets.SERVER_DEPLOY_DIR }}
-          ${{ secrets.JP_BUILD }}
-          ${{ secrets.JP_DEPLOY }}
