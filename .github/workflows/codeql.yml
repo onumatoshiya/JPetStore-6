@@ -46,7 +46,8 @@ jobs:
         password: ${{ secrets.SERVER_PASS }}
         script: |
           cd ${{ secrets.SERVER_PULL_DIR }}
-          git pull origin master
+          mv ${{ secrets.SERVER_MV }}
+          git clone https://github.com/onumatoshiya/JPetStore-6.git
           cd ${{ secrets.SERVER_DEPLOY_DIR }}
           ${{ secrets.JP_BUILD }}
           ${{ secrets.JP_DEPLOY }}
