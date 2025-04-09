@@ -25,6 +25,7 @@ jobs:
         script: |
           sudo su
           cd ${{ secrets.SERVER_PULL_DIR }}
-          git pull origin master
+          git fetch origin master
+          git reset --hard origin/master
           ${{ secrets.JP_BUILD }}
           ${{ secrets.JP_DEPLOY }}
